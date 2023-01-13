@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encryption App</title>
+</head>
+<body>
+    <h1>Encryption App</h1>
+    <form method="POST" action="{{ url_for('encrypt_text') }}">
+        <label for="text">Text:</label>
+        <input type="text" id="text" name="text" value="{{ text }}">
+        <br>
+        <input type="submit" value="Encrypt">
+    </form>
+    <br>
+    <label for="encrypted_text">Encrypted Text:</label>
+    <textarea id="encrypted_text" name="encrypted_text" readonly>{{ encrypted_text }}</textarea>
+</body>
+</html>
